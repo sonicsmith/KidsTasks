@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<br>
+<br>
+<br>
+<h1 id="task" align="center">START!</h1>
+<br>
+<br>
+<br>
+<h2 align="center">(Click the button once you have completed the task!)</h2>
+<br>
+<br>
+<br>
+
+<script>
+   var taskNumber = -1;
+   var taskList = [
+      'Put Clothes On',
+      'Put Shoes On',
+      'Make and eat Breakfast',
+      'Brush Hair (Ask parent to check)',
+      'Get Bag Ready',
+      'Brush Teeth',
+      'https://www.youtube.com/watch_popup?autoplay=1&v=Mcn1Q9fWahM'
+   ]
+   function getNextTask() {
+      taskNumber++;
+      if (taskList[taskNumber].includes('http')) {
+         window.open(taskList[taskNumber], "_self");
+         return "Done!";
+      } else {
+         return taskList[taskNumber];
+      }
+   }
+</script>
+
+<div align="center">
+<button onclick="getElementById('task').innerHTML=getNextTask()" align="center" style="height:100px;width:200px"><h1>DONE!</h1></button>
+</div>
+
+
+</body>
+</html>
